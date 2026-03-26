@@ -4,12 +4,12 @@ An AI-powered HR assistant built on the [Model Context Protocol (MCP)](https://m
 
 ## Features
 
-- **Employee Management** — add employees, search by name, view details, get manager/direct reports
-- **Leave Management** — check leave balance, apply for leave, view leave history
-- **Meeting Management** — schedule and cancel meetings
-- **IT Ticket Management** — raise and track equipment/procurement requests
-- **Email** — send real emails via Gmail SMTP (welcome emails, notifications)
-- **Onboarding Prompt** — built-in prompt that chains all tools to onboard a new employee end-to-end
+- **Employee Management**: add employees, search by name, view details, get manager/direct reports
+- **Leave Management**: check leave balance, apply for leave, view leave history
+- **Meeting Management**: schedule and cancel meetings
+- **IT Ticket Management**: raise and track equipment/procurement requests
+- **Email**: send real emails via Gmail SMTP (welcome emails, notifications)
+- **Onboarding Prompt**: built-in prompt that chains all tools to onboard a new employee end-to-end
 
 ## Setup
 
