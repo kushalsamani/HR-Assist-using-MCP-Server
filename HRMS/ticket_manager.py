@@ -1,5 +1,5 @@
 from typing import List, Dict, Optional
-from datetime import datetime
+from datetime import datetime, timezone
 from hrms.schemas import TicketCreate, TicketStatusUpdate
 
 
@@ -16,8 +16,8 @@ class TicketManager:
             "item": req.item,
             "reason": req.reason,
             "status": "Open",
-            "created_at": datetime.utcnow().isoformat(),
-            "updated_at": datetime.utcnow().isoformat()
+            "created_at": datetime.now(timezone.utc).isoformat(),
+            "updated_at": datetime.now(timezone.utc).isoformat()
         }
         self.tickets.append(ticket)
         self._next_id += 1
@@ -27,7 +27,7 @@ class TicketManager:
         for t in self.tickets:
             if t["ticket_id"] == ticket_id:
                 t["status"] = req.status
-                t["updated_at"] = datetime.utcnow().isoformat()
+                t["updated_at"] = datetime.now(timezone.utc).isoformat()
                 return f"Ticket {ticket_id} status updated to {req.status}."
         raise ValueError(f"Ticket '{ticket_id}' not found.")
 
